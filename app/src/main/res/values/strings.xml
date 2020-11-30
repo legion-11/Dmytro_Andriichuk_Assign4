@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">com.dmytroandriichuk.dmytro_andriichuk_assign4</string>
+    <string name="shared_username">com.dmytroandriichuk.dmytro_andriichuk_assign4.username</string>
+    <string name="shared_username_admin">com.dmytroandriichuk.dmytro_andriichuk_assign4.username_admin</string>
+    <string name="shared_password">com.dmytroandriichuk.dmytro_andriichuk_assign4.password</string>
+    <string name="shared_password_admin">com.dmytroandriichuk.dmytro_andriichuk_assign4.password_admin</string>
+    <string name="shared_checkbox">com.dmytroandriichuk.dmytro_andriichuk_assign4.checkbox</string>
+    <!-- Strings related to login -->
+    <string name="prompt_username">User name</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign Up</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="password_error">passwords are diffrent</string>
+    <string name="uwername_error">username already taken</string>
+    <string name="password_error_2">password is too short</string>
+    <string name="username_error">user name is empty</string>
+    <string name="format_name">%s %s</string>
+
+    <array name="pizzas">
+        <item>Meat Supreme</item>
+        <item>Super Hawaiian</item>
+        <item>Veggie</item>
+        <item>Mediterranean</item>
+        <item>Cheddar Supreme</item>
+        <item>Spanish Onions</item>
+    </array>
+
+    <string name="size">Size</string>
+    <!--    image text -->
+    <string name="extra_large_size_descr">Extra Large\n20\"</string>
+    <string name="large_size_descr">Large\n16\"</string>
+    <string name="medium_size_descr">Medium\n14\"</string>
+    <string name="small_size_descr">Small\n12\"</string>
+    <string name="logo">LOGO</string>
+
+    <!--    toppings -->
+    <string name="topping">Topping</string>
+    <string name="cheese">Cheese</string>
+    <string name="green_pepper">Green Pepper</string>
+    <string name="smoked_ham">Smoked Ham</string>
+    <string name="spinach">Spinach</string>
+    <string name="black_olives">Black Olives</string>
+    <string name="spanish_onions">Spanish Onions</string>
+    <string name="confirm_order_button">Confirm Order</string>
+</resources>

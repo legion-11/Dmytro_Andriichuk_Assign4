@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".PlaceOrderActivity">
+
+    <ImageView
+        android:id="@+id/imageSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/small_size_descr"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        app:layout_constraintEnd_toStartOf="@+id/imageMedium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaType"
+        app:srcCompat="@drawable/pizza_size" />
+
+
+    <ImageView
+        android:id="@+id/imageMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/medium_size_descr"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        app:layout_constraintEnd_toStartOf="@+id/imageLarge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageSmall"
+        app:layout_constraintTop_toTopOf="@+id/imageSmall"
+        app:srcCompat="@drawable/pizza_size" />
+
+
+    <ImageView
+        android:id="@+id/imageLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/large_size_descr"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        app:layout_constraintEnd_toStartOf="@+id/imageExLarge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageMedium"
+        app:layout_constraintTop_toTopOf="@+id/imageSmall"
+        app:srcCompat="@drawable/pizza_size" />
+
+
+    <ImageView
+        android:id="@+id/imageExLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/extra_large_size_descr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageLarge"
+        app:layout_constraintTop_toTopOf="@+id/imageSmall"
+        app:srcCompat="@drawable/pizza_size" />
+
+    <RadioGroup
+        android:id="@+id/sizesRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageMedium">
+
+
+        <RadioButton
+            android:id="@+id/radioButtonSmall"
+            style="@style/SelectSizeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/small_size_descr" />
+
+
+        <RadioButton
+            android:id="@+id/radioButtonMedium"
+            style="@style/SelectSizeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/medium_size_descr" />
+
+
+        <RadioButton
+            android:id="@+id/radioButtonLarge"
+            style="@style/SelectSizeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/large_size_descr" />
+
+
+        <RadioButton
+            android:id="@+id/radioButtonExtra"
+            style="@style/SelectSizeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/extra_large_size_descr" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/toppingTextView"
+        style="@style/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/topping"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSmall" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        style="@style/SelectToppingCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/cheese"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintStart_toStartOf="@+id/sizesRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/toppingTextView" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        style="@style/SelectToppingCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/green_pepper"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        style="@style/SelectToppingCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/smoked_ham"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        style="@style/SelectToppingCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spinach"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        style="@style/SelectToppingCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/black_olives"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox6"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        style="@style/SelectToppingCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spanish_onions"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="confirmOrder"
+        android:text="@string/confirm_order_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox6"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Spinner
+        android:id="@+id/pizzaType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeUserData"
+        android:text="Change user data"
+        app:layout_constraintBottom_toTopOf="@+id/confirmButton"
+        app:layout_constraintStart_toStartOf="@+id/confirmButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
